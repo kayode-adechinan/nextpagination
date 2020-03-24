@@ -2,7 +2,7 @@ import Link from 'next/link'
 import Router from 'next/router'
 import fetch from 'isomorphic-unfetch'
 export default class App extends React.Component {
-  static async getInitialProps({ query: { page = 1 } }) {
+  static async getInitialProps({ query: { page = 1} }) {
     const r = await fetch(
       `https://chroniclingamerica.loc.gov/search/titles/results/?terms=michigan&format=json&page=${page}`
     )
